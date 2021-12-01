@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+body {
+  background: linear-gradient(to right, rgb(40, 96, 180), rgb(24, 60, 88));
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background: rgba(255, 255, 255, 0.75);
+}
+.calculator-grid > button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.span-two {
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word; /*breaks text */
+  word-break: break-all;
+}
+.output .previous-operand {
+  color: rgba(187, 187, 187, 0.75);
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  color: rgb(187, 187, 187);
+  font-size: 2.5rem;
+}
